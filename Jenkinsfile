@@ -1,16 +1,19 @@
-pipeline{
-  agent any 
+pipeline {
+    agent any
+
     stages {
-        stage('Clone Code') { 
+        stage('Clone Code') {
             steps {
-                git credentialsId: 'githubpat', url: 'https://github.com/Santhosh2010-ramesh/First.git'
+                git branch: 'main', // change to your actual branch name
+                    url: 'https://github.com/Santhosh2010-ramesh/First.git',
+                    credentialsId: 'githubpat'
             }
         }
-        stage('Run Script') { 
+
+        stage('Run Script') {
             steps {
-                sh 'python3 hello.py' 
+                echo 'Running your script...'
             }
         }
-      
     }
 }
