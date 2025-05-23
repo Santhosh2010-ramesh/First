@@ -3,7 +3,7 @@ pipeline{
     stages {
         stage('Clone Code') { 
             steps {
-                git credentialsId: 'githubpat', url: 'https://github.com/santhosh2010-ramesh/python-hello-jenkins.git'' 
+                git credentialsId: 'githubpat', url: 'https://github.com/santhosh2010-ramesh/python-hello-jenkins.git'
             }
         }
         stage('Run Script') { 
