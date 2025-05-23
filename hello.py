@@ -1,1 +1,1 @@
-print("Hello from Jenkins pipeline! Files newly added!")
+print("Hello from Jenkins pipeline! Files newly added! manage")
